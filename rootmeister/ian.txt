@@ -1,6 +1,6 @@
-DISABLE REMOTE DESKTOP FIREWALL RULE
+##DISABLE REMOTE DESKTOP FIREWALL RULE
 netsh advfirewall firewall set rule group-"remote desktop" new enable-Yes
-ENABLE REMOTE DESKTOP
+##ENABLE REMOTE DESKTOP
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
-DISABLE REMOTE DESKTOP
+##DISABLE REMOTE DESKTOP
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f
